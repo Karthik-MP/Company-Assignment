@@ -1,0 +1,43 @@
+/* components/ui/sidebar.css */
+
+/* Base layout variables */
+:root {
+  --sidebar-width: 16rem; /* 256px default width */
+}
+
+/* When sidebar is rendered as 'inset', the SidebarInset will pad itself */
+.sidebar-inset {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  padding-left: var(--sidebar-width);
+}
+
+/* Sidebar rail (collapsed state) width */
+[data-collapsible="icon"] {
+  --sidebar-width: 4rem; /* 64px when collapsed */
+}
+
+/* Optional: make sure the sidebar itself takes full height */
+/* globals.css */
+.sidebar {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  /* height: 100vh;  ← remove this line */
+  flex-shrink: 0;
+  border-right: 1px solid hsl(var(--border));
+  background-color: hsl(var(--background));
+}
+
+
+/* Optional utility: inset container (used by <SidebarInset>) */
+.sidebar-inset > header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: inherit;
+}

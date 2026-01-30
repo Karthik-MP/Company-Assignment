@@ -1,0 +1,30 @@
+{
+  "name": "office-addin-challenge",
+  "version": "0.0.2",
+  "config": {
+    "app_to_debug": "word",
+    "app_type_to_debug": "desktop",
+    "dev_server_port": 3000
+  },
+  "scripts": {
+    "certs": "office-addin-dev-certs install --quiet",
+    "start": "concurrently -k \"npm run dev\" \"office-addin-debugging start manifest.xml\"",
+    "dev": "vite --port 3000 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 3000 --strictPort",
+    "stop": "office-addin-debugging stop manifest.xml",
+    "validate": "office-addin-manifest validate manifest.xml"
+  },
+  "dependencies": {
+    "office-addin-dev-certs": "^1.13.5",
+    "semver": "^7.7.3"
+  },
+  "devDependencies": {
+    "@types/office-js": "^1.0.377",
+    "concurrently": "^8.2.2",
+    "office-addin-debugging": "^5.1.6",
+    "office-addin-manifest": "^1.13.6",
+    "typescript": "^5.4.2",
+    "vite": "^5.4.2"
+  }
+}

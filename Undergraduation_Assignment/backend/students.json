@@ -1,0 +1,1302 @@
+[
+  {
+    "collection": "students",
+    "id": "stu_001",
+    "data": {
+      "name": "Miss Joy Bode Sr.",
+      "name_lc": "miss joy bode sr.",
+      "email": "Felicita.Kovacek75@gmail.com",
+      "email_lc": "felicita.kovacek75@gmail.com",
+      "phone": "843-930-0258 x5038",
+      "country": "Iraq",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 45,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_002",
+    "data": {
+      "name": "Traci Casper",
+      "name_lc": "traci casper",
+      "email": "Brady92@yahoo.com",
+      "email_lc": "brady92@yahoo.com",
+      "phone": "(245) 351-6771 x0974",
+      "country": "China",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 66,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_003",
+    "data": {
+      "name": "Rita Schowalter",
+      "name_lc": "rita schowalter",
+      "email": "Katrine.OConnell@hotmail.com",
+      "email_lc": "katrine.oconnell@hotmail.com",
+      "phone": "784-742-2303 x4721",
+      "country": "Bahamas",
+      "grade": "10",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 13,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_004",
+    "data": {
+      "name": "Sonia Boyer",
+      "name_lc": "sonia boyer",
+      "email": "Gerald96@gmail.com",
+      "email_lc": "gerald96@gmail.com",
+      "phone": "(635) 524-2301 x64050",
+      "country": "Tokelau",
+      "grade": "11",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 76,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_005",
+    "data": {
+      "name": "Kent Carroll",
+      "name_lc": "kent carroll",
+      "email": "Wilbert.Hilll99@gmail.com",
+      "email_lc": "wilbert.hilll99@gmail.com",
+      "phone": "1-764-357-5090 x5258",
+      "country": "Macao",
+      "grade": "12",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 27,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_006",
+    "data": {
+      "name": "Dr. Santos Lindgren",
+      "name_lc": "dr. santos lindgren",
+      "email": "Jordan.Kunde@hotmail.com",
+      "email_lc": "jordan.kunde@hotmail.com",
+      "phone": "221-549-1781 x0204",
+      "country": "Zambia",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 66,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_007",
+    "data": {
+      "name": "Brendan D'Amore",
+      "name_lc": "brendan d'amore",
+      "email": "Nils.Zulauf@yahoo.com",
+      "email_lc": "nils.zulauf@yahoo.com",
+      "phone": "367-339-0373",
+      "country": "Germany",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 52,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_008",
+    "data": {
+      "name": "Stewart Monahan",
+      "name_lc": "stewart monahan",
+      "email": "Willard.Gleichner@hotmail.com",
+      "email_lc": "willard.gleichner@hotmail.com",
+      "phone": "930-911-8830",
+      "country": "Albania",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 10,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_009",
+    "data": {
+      "name": "Raymond Schuppe",
+      "name_lc": "raymond schuppe",
+      "email": "Ephraim_Brakus@gmail.com",
+      "email_lc": "ephraim_brakus@gmail.com",
+      "phone": "492.903.0857 x2836",
+      "country": "Svalbard & Jan Mayen Islands",
+      "grade": "12",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 10,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_010",
+    "data": {
+      "name": "Deanna Oberbrunner",
+      "name_lc": "deanna oberbrunner",
+      "email": "Hailey82@yahoo.com",
+      "email_lc": "hailey82@yahoo.com",
+      "phone": "1-598-805-6579 x35265",
+      "country": "Uzbekistan",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 61,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_011",
+    "data": {
+      "name": "Maria Parisian I",
+      "name_lc": "maria parisian i",
+      "email": "Holden69@gmail.com",
+      "email_lc": "holden69@gmail.com",
+      "phone": "590-607-4908 x580",
+      "country": "Ghana",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 56,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_012",
+    "data": {
+      "name": "Sheri Kozey",
+      "name_lc": "sheri kozey",
+      "email": "Sebastian.Wuckert@hotmail.com",
+      "email_lc": "sebastian.wuckert@hotmail.com",
+      "phone": "(959) 469-6802 x7193",
+      "country": "Vanuatu",
+      "grade": "12",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 87,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_013",
+    "data": {
+      "name": "Neal Wyman-Hand IV",
+      "name_lc": "neal wyman-hand iv",
+      "email": "Jaquan_Murazik59@yahoo.com",
+      "email_lc": "jaquan_murazik59@yahoo.com",
+      "phone": "695-596-2986 x61301",
+      "country": "Lithuania",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 77,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_014",
+    "data": {
+      "name": "Dr. Robert Ortiz",
+      "name_lc": "dr. robert ortiz",
+      "email": "Hortense11@yahoo.com",
+      "email_lc": "hortense11@yahoo.com",
+      "phone": "1-802-898-2543 x906",
+      "country": "Saint Kitts and Nevis",
+      "grade": "12",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 14,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_015",
+    "data": {
+      "name": "Alexis Trantow",
+      "name_lc": "alexis trantow",
+      "email": "Ricardo29@hotmail.com",
+      "email_lc": "ricardo29@hotmail.com",
+      "phone": "1-722-672-2688 x08382",
+      "country": "French Southern Territories",
+      "grade": "12",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 97,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_016",
+    "data": {
+      "name": "Sheri Auer",
+      "name_lc": "sheri auer",
+      "email": "Crawford.Hermiston-Denesik76@yahoo.com",
+      "email_lc": "crawford.hermiston-denesik76@yahoo.com",
+      "phone": "576-236-2450 x045",
+      "country": "Myanmar",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 58,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_017",
+    "data": {
+      "name": "Mabel Heidenreich",
+      "name_lc": "mabel heidenreich",
+      "email": "Francesca63@gmail.com",
+      "email_lc": "francesca63@gmail.com",
+      "phone": "(407) 872-1745 x9545",
+      "country": "Burkina Faso",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 94,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_018",
+    "data": {
+      "name": "Julie MacGyver",
+      "name_lc": "julie macgyver",
+      "email": "Brent.Hegmann@yahoo.com",
+      "email_lc": "brent.hegmann@yahoo.com",
+      "phone": "(934) 954-6583",
+      "country": "Turks and Caicos Islands",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 12,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_019",
+    "data": {
+      "name": "Hattie Okuneva",
+      "name_lc": "hattie okuneva",
+      "email": "Rafaela.Fritsch@gmail.com",
+      "email_lc": "rafaela.fritsch@gmail.com",
+      "phone": "408-766-5616",
+      "country": "Azerbaijan",
+      "grade": "12",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 2,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_020",
+    "data": {
+      "name": "Terrence Ullrich",
+      "name_lc": "terrence ullrich",
+      "email": "Casimer.Heathcote15@gmail.com",
+      "email_lc": "casimer.heathcote15@gmail.com",
+      "phone": "1-542-249-4617 x89634",
+      "country": "Jordan",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 13,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_021",
+    "data": {
+      "name": "Phillip Olson",
+      "name_lc": "phillip olson",
+      "email": "Rebeca39@yahoo.com",
+      "email_lc": "rebeca39@yahoo.com",
+      "phone": "362-316-5960",
+      "country": "Heard Island and McDonald Islands",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 15,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_022",
+    "data": {
+      "name": "Jamie Satterfield",
+      "name_lc": "jamie satterfield",
+      "email": "Conner.Vandervort67@hotmail.com",
+      "email_lc": "conner.vandervort67@hotmail.com",
+      "phone": "(915) 661-9378 x4985",
+      "country": "Puerto Rico",
+      "grade": "10",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 15,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_023",
+    "data": {
+      "name": "Dominic Heller",
+      "name_lc": "dominic heller",
+      "email": "Lyda.Goldner51@gmail.com",
+      "email_lc": "lyda.goldner51@gmail.com",
+      "phone": "1-758-696-9099 x159",
+      "country": "Grenada",
+      "grade": "11",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 39,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_024",
+    "data": {
+      "name": "Maureen Gleason",
+      "name_lc": "maureen gleason",
+      "email": "Cooper_Nitzsche@yahoo.com",
+      "email_lc": "cooper_nitzsche@yahoo.com",
+      "phone": "261-735-0542 x0605",
+      "country": "Denmark",
+      "grade": "11",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 38,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_025",
+    "data": {
+      "name": "Judith Weber",
+      "name_lc": "judith weber",
+      "email": "Christopher.Stroman58@yahoo.com",
+      "email_lc": "christopher.stroman58@yahoo.com",
+      "phone": "364.712.8892 x637",
+      "country": "Guernsey",
+      "grade": "12",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 18,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_026",
+    "data": {
+      "name": "Lowell Dickinson-Kohler",
+      "name_lc": "lowell dickinson-kohler",
+      "email": "Sammy4@gmail.com",
+      "email_lc": "sammy4@gmail.com",
+      "phone": "(475) 554-0164 x941",
+      "country": "Mexico",
+      "grade": "12",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 91,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_027",
+    "data": {
+      "name": "Sherman McGlynn",
+      "name_lc": "sherman mcglynn",
+      "email": "Zoie47@yahoo.com",
+      "email_lc": "zoie47@yahoo.com",
+      "phone": "954-777-4558 x99525",
+      "country": "Saudi Arabia",
+      "grade": "11",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 50,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_028",
+    "data": {
+      "name": "Lela Frami",
+      "name_lc": "lela frami",
+      "email": "Vincent.Lakin@hotmail.com",
+      "email_lc": "vincent.lakin@hotmail.com",
+      "phone": "1-735-630-7111 x44516",
+      "country": "Azerbaijan",
+      "grade": "11",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 8,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_029",
+    "data": {
+      "name": "Sara Marks",
+      "name_lc": "sara marks",
+      "email": "Alysa_Veum68@yahoo.com",
+      "email_lc": "alysa_veum68@yahoo.com",
+      "phone": "1-283-425-0139 x88033",
+      "country": "Ghana",
+      "grade": "11",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 76,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_030",
+    "data": {
+      "name": "Bernard Stehr",
+      "name_lc": "bernard stehr",
+      "email": "Robyn22@hotmail.com",
+      "email_lc": "robyn22@hotmail.com",
+      "phone": "678-507-8197",
+      "country": "Niue",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 74,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_031",
+    "data": {
+      "name": "Gerardo Sipes",
+      "name_lc": "gerardo sipes",
+      "email": "Jenifer4@gmail.com",
+      "email_lc": "jenifer4@gmail.com",
+      "phone": "1-395-937-3760 x229",
+      "country": "Bonaire, Sint Eustatius and Saba",
+      "grade": "10",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 28,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_032",
+    "data": {
+      "name": "Adam Gerlach",
+      "name_lc": "adam gerlach",
+      "email": "Tiara_Hirthe31@hotmail.com",
+      "email_lc": "tiara_hirthe31@hotmail.com",
+      "phone": "768-213-5587 x863",
+      "country": "Guinea-Bissau",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 98,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_033",
+    "data": {
+      "name": "Mae Berge I",
+      "name_lc": "mae berge i",
+      "email": "Jocelyn62@hotmail.com",
+      "email_lc": "jocelyn62@hotmail.com",
+      "phone": "621-630-3998 x4648",
+      "country": "North Macedonia",
+      "grade": "12",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 53,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_034",
+    "data": {
+      "name": "Jasmine Osinski",
+      "name_lc": "jasmine osinski",
+      "email": "Weldon.Hauck@gmail.com",
+      "email_lc": "weldon.hauck@gmail.com",
+      "phone": "1-685-255-5626 x876",
+      "country": "India",
+      "grade": "11",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 96,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_035",
+    "data": {
+      "name": "Franklin Schroeder",
+      "name_lc": "franklin schroeder",
+      "email": "Annabel_Bednar@hotmail.com",
+      "email_lc": "annabel_bednar@hotmail.com",
+      "phone": "1-590-898-9659 x71582",
+      "country": "Seychelles",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 33,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_036",
+    "data": {
+      "name": "Jody Kunde",
+      "name_lc": "jody kunde",
+      "email": "Rafaela_Sipes@yahoo.com",
+      "email_lc": "rafaela_sipes@yahoo.com",
+      "phone": "(896) 215-8506 x7367",
+      "country": "Cambodia",
+      "grade": "11",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 63,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_037",
+    "data": {
+      "name": "Dr. Laverne Connelly",
+      "name_lc": "dr. laverne connelly",
+      "email": "Jammie_Hettinger@gmail.com",
+      "email_lc": "jammie_hettinger@gmail.com",
+      "phone": "1-944-680-2863",
+      "country": "Benin",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 59,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_038",
+    "data": {
+      "name": "Cecelia Ziemann",
+      "name_lc": "cecelia ziemann",
+      "email": "Laney.Lakin@hotmail.com",
+      "email_lc": "laney.lakin@hotmail.com",
+      "phone": "487.957.4321 x87587",
+      "country": "Gibraltar",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 69,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_039",
+    "data": {
+      "name": "Domingo Goyette",
+      "name_lc": "domingo goyette",
+      "email": "Sierra66@hotmail.com",
+      "email_lc": "sierra66@hotmail.com",
+      "phone": "1-725-455-6244 x7999",
+      "country": "Western Sahara",
+      "grade": "10",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 43,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_040",
+    "data": {
+      "name": "Cameron Jacobson V",
+      "name_lc": "cameron jacobson v",
+      "email": "Lempi21@hotmail.com",
+      "email_lc": "lempi21@hotmail.com",
+      "phone": "260-606-3363 x71193",
+      "country": "Solomon Islands",
+      "grade": "10",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 58,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_041",
+    "data": {
+      "name": "Arnold Hills",
+      "name_lc": "arnold hills",
+      "email": "Clara_Schamberger@hotmail.com",
+      "email_lc": "clara_schamberger@hotmail.com",
+      "phone": "804.668.7375",
+      "country": "Nicaragua",
+      "grade": "10",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 59,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_042",
+    "data": {
+      "name": "Rodolfo Hyatt",
+      "name_lc": "rodolfo hyatt",
+      "email": "Name.Kilback@gmail.com",
+      "email_lc": "name.kilback@gmail.com",
+      "phone": "382.371.3597 x07952",
+      "country": "Cayman Islands",
+      "grade": "11",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 4,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_043",
+    "data": {
+      "name": "Sandra Hayes",
+      "name_lc": "sandra hayes",
+      "email": "Alexie_Davis-Schuppe54@yahoo.com",
+      "email_lc": "alexie_davis-schuppe54@yahoo.com",
+      "phone": "254.334.9780 x0095",
+      "country": "Tunisia",
+      "grade": "11",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 18,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_044",
+    "data": {
+      "name": "Hugo Emmerich I",
+      "name_lc": "hugo emmerich i",
+      "email": "Franco_Swaniawski@yahoo.com",
+      "email_lc": "franco_swaniawski@yahoo.com",
+      "phone": "694.232.8767 x930",
+      "country": "Angola",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 72,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_045",
+    "data": {
+      "name": "Iris Berge",
+      "name_lc": "iris berge",
+      "email": "Wendell_Block-Waelchi@yahoo.com",
+      "email_lc": "wendell_block-waelchi@yahoo.com",
+      "phone": "1-580-884-0416",
+      "country": "Liberia",
+      "grade": "9",
+      "status": "Applying",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": false,
+      "progress": 39,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_046",
+    "data": {
+      "name": "Chelsea Turcotte",
+      "name_lc": "chelsea turcotte",
+      "email": "Luz_Mohr@gmail.com",
+      "email_lc": "luz_mohr@gmail.com",
+      "phone": "1-659-834-8288 x792",
+      "country": "Palestine",
+      "grade": "11",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": true,
+      "progress": 89,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_047",
+    "data": {
+      "name": "Orlando Altenwerth",
+      "name_lc": "orlando altenwerth",
+      "email": "Korey_White20@gmail.com",
+      "email_lc": "korey_white20@gmail.com",
+      "phone": "1-471-276-6018",
+      "country": "British Indian Ocean Territory (Chagos Archipelago)",
+      "grade": "9",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": false,
+      "needsEssayHelp": true,
+      "progress": 29,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_048",
+    "data": {
+      "name": "Sheryl Lakin",
+      "name_lc": "sheryl lakin",
+      "email": "Mandy_Kunde@hotmail.com",
+      "email_lc": "mandy_kunde@hotmail.com",
+      "phone": "718-860-9765 x9438",
+      "country": "Saint Martin",
+      "grade": "12",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 33,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_049",
+    "data": {
+      "name": "Rafael Dicki",
+      "name_lc": "rafael dicki",
+      "email": "Clemmie0@gmail.com",
+      "email_lc": "clemmie0@gmail.com",
+      "phone": "1-496-952-8874",
+      "country": "Pakistan",
+      "grade": "9",
+      "status": "Accepted",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 11,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  },
+  {
+    "collection": "students",
+    "id": "stu_050",
+    "data": {
+      "name": "Sylvester Kovacek",
+      "name_lc": "sylvester kovacek",
+      "email": "Demetris.Turner7@yahoo.com",
+      "email_lc": "demetris.turner7@yahoo.com",
+      "phone": "720-416-0093 x361",
+      "country": "Iraq",
+      "grade": "11",
+      "status": "Exploring",
+      "lastActive": {
+        "_serverTimestamp": true
+      },
+      "highIntent": true,
+      "needsEssayHelp": false,
+      "progress": 40,
+      "createdAt": {
+        "_serverTimestamp": true
+      },
+      "updatedAt": {
+        "_serverTimestamp": true
+      }
+    }
+  }
+]
