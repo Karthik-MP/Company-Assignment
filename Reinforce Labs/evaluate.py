@@ -182,6 +182,34 @@ def resolve_model_cols(
     )
 
 
+
+def _check_label_consistency(df: pd.DataFrame, cols: ModelCols, model_name: str, strict: bool = True) -> None:
+    """
+    Basic sanity checks:
+    - A row cannot be both refusal and hallucination.
+    - refusal_type should exist when is_refusal is True.
+    """
+    is_ref = df[cols.is_refusal].map(_to_bool)
+    is_hall = df[cols.is_hallucination].map(_to_bool)
+    bad_both = ((is_ref == True) & (is_hall == True))
+    n_bad = int(bad_both.sum())
+    if n_bad:
+        msg = f"[{model_name}] Found {n_bad} rows with is_refusal=True AND is_hallucination=True. Fix labeling."
+        if strict:
+            raise ValueError(msg)
+        print("WARNING:", msg, file=sys.stderr)
+
+    if cols.refusal_type in df.columns:
+        rtype = df[cols.refusal_type].map(_norm_str)
+        missing_type = ((is_ref == True) & (rtype.isna()))
+        n_missing = int(missing_type.sum())
+        if n_missing:
+            msg = f"[{model_name}] Found {n_missing} refusal rows with missing refusal_type. Set refusal_type to 'compliance' or 'capability'."
+            if strict:
+                raise ValueError(msg)
+            print("WARNING:", msg, file=sys.stderr)
+
+
 # -------------------------
 # Core metric computations
 # -------------------------
@@ -209,6 +237,9 @@ class ModelSummary:
     S_base: float
     S_oc: float
     mean_latency_ms: Optional[float]
+    median_latency_ms: Optional[float]
+    p95_latency_ms: Optional[float]
+    p99_latency_ms: Optional[float]
     annual_cost_raw: float
     annual_cost_raw_plus_refusal: float
 
@@ -219,17 +250,32 @@ def _compute_unjustified_refusals(df: pd.DataFrame, cols: ModelCols) -> pd.Serie
     """
     is_ref = df[cols.is_refusal]
     rtype = df[cols.refusal_type]
-    avail = df["data_availability"]
+    avail = df["data_availability"].map(_norm_str)
 
     return (is_ref == True) & (rtype == "capability") & (avail.isin(["full", "partial"]))
 
 
 def _compute_model_summary(df: pd.DataFrame, model: str, cols: ModelCols, params: EvalParams) -> ModelSummary:
     # Normalize columns
-    conf = pd.to_numeric(df[cols.confidence], errors="coerce").fillna(0.0).clip(0.0, 1.0)
+    conf = pd.to_numeric(df[cols.confidence], errors="coerce")
+    
+    # Check for NaN in confidence before filling
+    n_nan_conf = conf.isna().sum()
+    if n_nan_conf > 0:
+        print(f"WARNING [{model}]: Found {n_nan_conf} NaN confidence values. Filling with 0.0.", file=sys.stderr)
+    
+    conf = conf.fillna(0.0).clip(0.0, 1.0)
     is_refusal = df[cols.is_refusal].map(_to_bool)
     is_halluc = df[cols.is_hallucination].map(_to_bool)
     refusal_type = df[cols.refusal_type].map(_norm_str)
+    
+    # Check for None/NaN in boolean columns
+    n_none_refusal = is_refusal.isna().sum()
+    n_none_halluc = is_halluc.isna().sum()
+    if n_none_refusal > 0:
+        raise ValueError(f"[{model}] Found {n_none_refusal} rows with None/NaN is_refusal. All rows must have valid boolean values (True/False/1/0).")
+    if n_none_halluc > 0:
+        raise ValueError(f"[{model}] Found {n_none_halluc} rows with None/NaN is_hallucination. All rows must have valid boolean values (True/False/1/0).")
 
     # Fill back normalized
     df_local = df.copy()
@@ -259,29 +305,31 @@ def _compute_model_summary(df: pd.DataFrame, model: str, cols: ModelCols, params
 
     S_base = scoring.score_S(
         N=N,
-        hallucinations=hall_confs,
+        hallucination_confidences=hall_confs,
         unjustified_refusals=UR,
-        tau=params.tau,
-        p=params.p,
-        lam=0.0,
+        params=scoring.OverconfidenceParams(tau=params.tau, p=params.p, lam=0.0),
         cost_ratio_refusal_to_halluc=(params.cost_unjust_refusal / params.cost_halluc),
     )
 
     S_oc = scoring.score_S(
         N=N,
-        hallucinations=hall_confs,
+        hallucination_confidences=hall_confs,
         unjustified_refusals=UR,
-        tau=params.tau,
-        p=params.p,
-        lam=params.lam,
+        params=scoring.OverconfidenceParams(tau=params.tau, p=params.p, lam=params.lam),
         cost_ratio_refusal_to_halluc=(params.cost_unjust_refusal / params.cost_halluc),
     )
 
     mean_latency = None
+    median_latency = None
+    p95_latency = None
+    p99_latency = None
     if cols.latency_ms and cols.latency_ms in df_local.columns:
-        lat = pd.to_numeric(df_local[cols.latency_ms], errors="coerce")
-        if lat.notna().any():
+        lat = pd.to_numeric(df_local[cols.latency_ms], errors="coerce").dropna()
+        if len(lat):
             mean_latency = float(lat.mean())
+            median_latency = float(lat.median())
+            p95_latency = float(lat.quantile(0.95))
+            p99_latency = float(lat.quantile(0.99))
 
     # Annual cost (raw): hallucinations only
     h_rate = H / N if N else 0.0
@@ -304,6 +352,9 @@ def _compute_model_summary(df: pd.DataFrame, model: str, cols: ModelCols, params
         S_base=float(S_base),
         S_oc=float(S_oc),
         mean_latency_ms=mean_latency,
+        median_latency_ms=median_latency,
+        p95_latency_ms=p95_latency,
+        p99_latency_ms=p99_latency,
         annual_cost_raw=float(annual_cost_raw),
         annual_cost_raw_plus_refusal=float(annual_cost_raw_plus_refusal),
     )
@@ -377,11 +428,9 @@ def _slice_table(
         A_hall_confs = g.loc[g[Acols.is_hallucination] == True, Acols.confidence].astype(float).tolist()
         A_Soc = scoring.score_S(
             N=N,
-            hallucinations=A_hall_confs,
+            hallucination_confidences=A_hall_confs,
             unjustified_refusals=A_ur,
-            tau=params.tau,
-            p=params.p,
-            lam=params.lam,
+            params=scoring.OverconfidenceParams(tau=params.tau, p=params.p, lam=params.lam),
             cost_ratio_refusal_to_halluc=(params.cost_unjust_refusal / params.cost_halluc),
         )
 
@@ -394,15 +443,13 @@ def _slice_table(
         B_hall_confs = g.loc[g[Bcols.is_hallucination] == True, Bcols.confidence].astype(float).tolist()
         B_Soc = scoring.score_S(
             N=N,
-            hallucinations=B_hall_confs,
+            hallucination_confidences=B_hall_confs,
             unjustified_refusals=B_ur,
-            tau=params.tau,
-            p=params.p,
-            lam=params.lam,
+            params=scoring.OverconfidenceParams(tau=params.tau, p=params.p, lam=params.lam),
             cost_ratio_refusal_to_halluc=(params.cost_unjust_refusal / params.cost_halluc),
         )
 
-                # Unsafe transition within slice: A refused AND B hallucinated
+        # Unsafe transition within slice: A refused AND B hallucinated
         A_ref = (g[Acols.is_refusal] == True)
         B_hall = (g[Bcols.is_hallucination] == True)
         unsafe = A_ref & B_hall
@@ -414,7 +461,28 @@ def _slice_table(
         R_unsafe_comp = unsafe_comp / N if N else 0.0
         R_unsafe_cap = unsafe_cap / N if N else 0.0
 
-# Expected annual cost delta for this slice (raw + refusal)
+        # Latency stats (optional; may not exist in all datasets)
+        A_mean_lat = None
+        A_p95_lat = None
+        B_mean_lat = None
+        B_p95_lat = None
+
+        if Acols.latency_ms and Acols.latency_ms in g.columns:
+            latA = pd.to_numeric(g[Acols.latency_ms], errors="coerce").dropna()
+            if len(latA):
+                A_mean_lat = float(latA.mean())
+                A_p95_lat = float(latA.quantile(0.95))
+
+        if Bcols.latency_ms and Bcols.latency_ms in g.columns:
+            latB = pd.to_numeric(g[Bcols.latency_ms], errors="coerce").dropna()
+            if len(latB):
+                B_mean_lat = float(latB.mean())
+                B_p95_lat = float(latB.quantile(0.95))
+
+        delta_mean_lat = (B_mean_lat - A_mean_lat) if (A_mean_lat is not None and B_mean_lat is not None) else None
+        delta_p95_lat = (B_p95_lat - A_p95_lat) if (A_p95_lat is not None and B_p95_lat is not None) else None
+
+        # Expected annual cost delta for this slice (raw + refusal)
         # Use slice rates applied to annual_queries as if this slice represented all traffic;
         # for ranking, we also compute per-query expected cost delta.
         A_cost_per_query = params.cost_halluc * A_h_rate + params.cost_unjust_refusal * A_ur_rate
@@ -436,6 +504,12 @@ def _slice_table(
             "A_S_oc": float(A_Soc),
             "B_S_oc": float(B_Soc),
             "delta_S_oc": float(B_Soc - A_Soc),
+            "A_mean_latency_ms": A_mean_lat,
+            "B_mean_latency_ms": B_mean_lat,
+            "delta_mean_latency_ms": delta_mean_lat,
+            "A_p95_latency_ms": A_p95_lat,
+            "B_p95_latency_ms": B_p95_lat,
+            "delta_p95_latency_ms": delta_p95_lat,
             "delta_cost_per_query": float(B_cost_per_query - A_cost_per_query),
         })
 
@@ -506,6 +580,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     strict = not args.not_strict
     _require_common_cols(df, strict=strict)
 
+    # Normalize common columns (avoid case / whitespace mismatches)
+    for c in ["query_type", "complexity", "data_availability"]:
+        if c in df.columns:
+            df[c] = df[c].map(_norm_str)
+
+
     # Resolve model columns (auto-detect with optional prefix/suffix)
     Acols = resolve_model_cols(df, "A", prefix=args.a_prefix, suffix=args.a_suffix, strict=strict)
     Bcols = resolve_model_cols(df, "B", prefix=args.b_prefix, suffix=args.b_suffix, strict=strict)
@@ -523,6 +603,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     print("\nResolved columns:")
     print(f"  Model A: {Acols}")
     print(f"  Model B: {Bcols}")
+
+    # Basic label consistency checks
+    _check_label_consistency(df, Acols, "Model A", strict=strict)
+    _check_label_consistency(df, Bcols, "Model B", strict=strict)
 
     # Overall summaries
     A_sum = _compute_model_summary(df, "A", Acols, params)

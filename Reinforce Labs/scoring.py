@@ -70,6 +70,12 @@ def score_S(
         raise ValueError(f"unjustified_refusals must be >= 0. Got {unjustified_refusals}")
     if not (0.0 <= cost_ratio_refusal_to_halluc):
         raise ValueError(f"cost_ratio_refusal_to_halluc must be >= 0. Got {cost_ratio_refusal_to_halluc}")
+    
+    # Validate confidence values for NaN/None
+    for i, c in enumerate(hallucination_confidences):
+        if c is None or (isinstance(c, float) and (c != c)):  # NaN check
+            raise ValueError(f"hallucination_confidences[{i}] is None or NaN. All confidences must be valid floats in [0,1].")
+        _validate_confidence(c)
 
     H_eff = effective_hallucination_count(hallucination_confidences, params)
     norm_cost = (H_eff / N) + cost_ratio_refusal_to_halluc * (unjustified_refusals / N)
