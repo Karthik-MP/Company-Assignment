@@ -456,7 +456,8 @@ That's why it works for Go / No-Go.
 ## 4.7. Executive summary
 
 ### NO-GO DecisionRecommendation: 
-Reject Model B. Do not deploy.Rationale:While Model B offers a significant latency reduction (400ms vs 800ms) and higher general accuracy, it introduces a critical safety regression.
+Reject Model B. Do not deploy. 
+- Rationale: While Model B offers a significant latency reduction (400ms vs 800ms) and higher general accuracy, it introduces a critical safety regression.
 
 - **Financial Risk**: The increase in hallucination rate from 2% to 6% represents an estimated $20B increased liability exposure annually.
 - **Compliance Failure**: Model B hallucinates on queries where Model A correctly issued compliance refusals ($R_{\text{unsafe,comp}} > 0$).
@@ -662,8 +663,6 @@ Model B is **not safe for production deployment** in its current form. The hallu
 - **This is mathematically impossible** — no model refuses 80% of traffic
 
 **Bottom line:** Model B's hallucination increase cannot be offset by refusal reductions given the 20:1 cost ratio.
-
----
 
 ### ⚙️ **Conditional Approval Path** (High-risk, not recommended)
 

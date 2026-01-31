@@ -1,4 +1,4 @@
-# Understanding the Evaluation Output (Plain-English Guide)
+# Understanding the Evaluation Output (Guide)
 
 This file explains **what the terminal output looks like** and **what it is telling you**, as if you were walking someone through it who hasn’t seen this project before.
 
@@ -162,7 +162,7 @@ A table with columns like:
 
 ---
 
-## 7) Final plain-English conclusion (what the output is saying)
+## 7) Final conclusion (what the output is saying)
 
 If you summarize the entire output as one statement:
 
